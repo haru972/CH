@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
 
-# リストvecで表されるm*n Hankel行列の行列式を返す関数を定義する
+# リストvecで表されるn*nのHankel行列の行列式を返す関数を定義する
 def hankel_determinant(m, n, vec):
     if n == 0:
         return 1
