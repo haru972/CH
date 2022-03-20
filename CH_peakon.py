@@ -112,5 +112,5 @@ for t in t_list:
 
 # グラフを描画し保存する
 fig = plt.figure(figsize=(8, 3))
-anim = FuncAnimation(fig, lambda it: update(fig, x, u_list,q_list, t_list, it), len(t_list), interval=delta_t*1000, blit=False)#アニメを作る関数
+anim = FuncAnimation(fig, lambda it: update(fig, x, u_list,q_list, t_list, it), len(t_list), interval=delta_t*1000, blit=False) # アニメを作る関数
 anim.save('CH_peakon.gif', writer='pillow')
