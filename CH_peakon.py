@@ -78,21 +78,21 @@ for t in t_list:
         i = j+1 # 1からNまで動く変数
 
         # 先に分母を計算し、0となるときはエラーを出力する
-        p_mother = (hankel_determinant(1, N-i+1, hankel_vec)*(hankel_determinant(1, N-i, hankel_vec)))
-        q_mother = hankel_determinant(2, N-i, hankel_vec)
+        p_denominator = (hankel_determinant(1, N-i+1, hankel_vec)*(hankel_determinant(1, N-i, hankel_vec)))
+        q_denominator = hankel_determinant(2, N-i, hankel_vec)
 
-        if p_mother == 0:
+        if p_denominator == 0:
             print("error_p", t, j)
             p = 0
         else:
-            p = 4*hankel_determinant(0, N-i+1, hankel_vec)*hankel_determinant(2, N-i, hankel_vec)/(hankel_determinant(1, N-i+1, hankel_vec)*(hankel_determinant(1, N-i, hankel_vec)))
+            p = 4*hankel_determinant(0, N-i+1, hankel_vec)*hankel_determinant(2, N-i, hankel_vec)/p_denominator
 
-        if q_mother == 0:
+        if q_denominator == 0:
             print("error_q", t, j)
             q = 0
             p = 0
         else:
-            q = np.log(2*hankel_determinant(0, N-i+1, hankel_vec)/hankel_determinant(2, N-i, hankel_vec))
+            q = np.log(2*hankel_determinant(0, N-i+1, hankel_vec)/q_denominator)
         
         p_vec.append(p)
         q_vec.append(q)
