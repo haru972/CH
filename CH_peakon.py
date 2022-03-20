@@ -41,7 +41,7 @@ def update(fig, x, data, data_2, t, it):
 
 # 計算範囲を入力する
 N_t = 200
-t_min = -4 # tの絶対値が大きいとき挙動が不安定になるので注意する。
+t_min = -4 # tの絶対値が大きいとき挙動が不安定になるので注意する
 t_max = 4
 t_list = np.linspace(t_min, t_max, N_t)
 delta_t = t_list[1]-t_list[0]
