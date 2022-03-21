@@ -98,7 +98,7 @@ for t in t_list:
         q_vec.append(q)
     
 
-    # uにp*exp(|x-q|)を重ねる
+    # uにp*exp(-|x-q|)を重ねる
     u = 0
     for i in range(N):
         u = u+p_vec[i]*np.exp(-np.abs(x-q_vec[i]))
